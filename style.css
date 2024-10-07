@@ -4,70 +4,76 @@
     font-weight: 400;
     font-style: normal;
 }
-body {
-    transform: scale(0.75); 
-    transform-origin: top left; /* 축소 기준점을 좌상단으로 설정 */
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; /* 넘치는 부분을 숨김 처리 */
-}
 
 body {
     margin: 0;
-    background-color: #ffffff; /* 배경색 하얗게 설정 */
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* 가로 스크롤 숨김 */
 }
 
 header {
-    display: flex; /* Flexbox를 사용하여 요소 정렬 */
-    justify-content: center; /* 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
-    height: 118px; /* 헤더 높이를 118px로 설정 */
-    width: 1920px; /* 헤더 너비를 1920px로 설정 */
-    margin: 0 auto; /* 중앙 정렬을 위해 좌우 여백 자동 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh; /* 뷰포트 높이의 6% */
+    width: 100%; /* 뷰포트 너비 전체 */
+    margin: 0;
 }
 
 .header-content {
-    display: flex; /* Flexbox를 사용하여 텍스트와 로고 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* 전체 너비의 90%로 설정 */
 }
 
 .text1, .text2 {
-    margin: 0 650px; /* 텍스트와 로고 사이의 여백 설정 */
-    font-family: 'Pretendard-Regular', sans-serif; /* Pretendard 폰트 적용 */
-    font-size: 36px; /* 텍스트 크기 설정 */
-    width: 200px; /* 텍스트 너비 고정 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    font-size: medium;
+    margin: 0 38vw; /* 뷰포트 너비 기준 여백 */
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: 1vw; /* 뷰포트 너비 기준 텍스트 크기 */
+    text-align: center;
 }
 
 .logo {
-    width: 114px; /* 로고의 너비 설정 */
-    height: 24px; /* 로고 높이를 설정 */
+    width: 5vw; /* 로고 너비를 뷰포트 너비의 5%로 설정 */
+    height: auto; /* 높이를 비율에 맞게 조정 */
 }
 
 .image-grid {
-    display: grid; /* 그리드 레이아웃 사용 */
-    grid-template-columns: repeat(2, 1fr); /* 2개의 열로 구성 */
-    gap: 70px; /* 이미지 간의 여백 설정 */
-    width: 680px; /* 그리드 너비 고정 */
-    padding-left: 110px;
-    padding-right: 110px;
-    padding-top : 50px;
-    padding-bottom : 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vw; /* 뷰포트 너비의 5% 간격 */
+    width: 90vw; /* 그리드 너비를 뷰포트 너비의 90%로 설정 */
+    margin: 0 auto;
+    padding: 5vh 0; /* 뷰포트 높이 기준 패딩 */
 }
 
 .image {
-    width: 680px; /* 이미지 너비를 고정 */
-    height: 84px; /* 이미지 높이를 자동 조정 */
+    width: 100%; /* 그리드 셀을 가득 채우도록 설정 */
+    height: auto; /* 비율에 맞게 조정 */
 }
 
 .main-image {
-    display: block; /* 이미지 블록 요소로 설정 */
-    width: 1920px; /* 메인 이미지 너비 고정 */
-    height: auto; /* 높이는 자동 조정 */
-    margin: 0 auto; /* 중앙 정렬을 위해 좌우 여백 자동 설정 */
+    display: block;
+    width: 100vw; /* 뷰포트 너비에 맞게 설정 */
+    height: auto;
+    margin: 0 auto;
 }
 
-.image:nth-child(1) {
-    margin-right: 200px; /* Jangma와 Yuri 사이의 간격을 설정 */
+@media (max-width: 768px) {
+    .text1, .text2 {
+        font-size: 3vw; /* 작은 화면에서는 텍스트 크기를 더 작게 설정 */
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr; /* 작은 화면에서는 한 열로 설정 */
+        width: 100vw;
+        gap: 3vw;
+    }
+
+    .logo {
+        width: 8vw; /* 작은 화면에서 로고 크기 조정 */
+    }
 }
