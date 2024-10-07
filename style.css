@@ -4,6 +4,13 @@
     font-weight: 400;
     font-style: normal;
 }
+body {
+    transform: scale(0.75); /* 전체 화면을 75%로 축소 */
+    transform-origin: top left; /* 축소 기준점을 좌상단으로 설정 */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* 넘치는 부분을 숨김 처리 */
+}
 
 body {
     margin: 0;
