@@ -30,14 +30,14 @@ header {
 }
 
 .text1, .text2 {
-    margin: 0 38vw; /* 뷰포트 너비 기준 여백 */
+    margin: 0 37vw; /* 뷰포트 너비 기준 여백 */
     font-family: 'Pretendard-Regular', sans-serif;
     font-size: 1vw; /* 뷰포트 너비 기준 텍스트 크기 */
     text-align: center;
 }
 
 .logo {
-    width: 5vw; /* 로고 너비를 뷰포트 너비의 5%로 설정 */
+    width: 6vw; /* 로고 너비를 뷰포트 너비의 6%로 설정 */
     height: auto; /* 높이를 비율에 맞게 조정 */
 }
 
@@ -64,7 +64,8 @@ header {
 
 @media (max-width: 768px) {
     .text1, .text2 {
-        font-size: 3vw; /* 작은 화면에서는 텍스트 크기를 더 작게 설정 */
+        font-size: 4vw; /* 작은 화면에서는 텍스트 크기를 더 작게 설정 */
+        margin: 0 20vw; /* 작은 화면에서 여백 조정 */
     }
 
     .image-grid {
