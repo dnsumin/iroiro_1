@@ -89,3 +89,18 @@ main {
     flex: 1; /* 남은 공간을 채우기 위해 설정 */
     margin: 0; /* 기본 마진 제거 */
 }
+
+/* 이미지 링크 스타일 */
+.image-link {
+    display: inline-block;
+    position: relative;
+    z-index: 2; /* 우선순위 부여 */
+}
+
+/* 이미지 스타일 */
+.image {
+    width: 100%; /* 필요한 크기에 맞게 조절 */
+    height: auto;
+    display: block; /* 인라인 여백 제거 */
+}
+
